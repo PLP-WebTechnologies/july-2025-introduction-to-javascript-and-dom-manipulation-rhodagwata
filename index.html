@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Learning JavaScript</h1>
+            <p>My practice with variables, functions, loops, and DOM stuff</p>
+        </header>
+
+        <!-- Part 1: Basics -->
+        <section class="section" id="basics">
+            <h2>Part 1: JavaScript Basics</h2>
+            <div class="content-box">
+                <h3>User Info Thing</h3>
+                <p>Enter your details and I'll tell you what category you are:</p>
+                <div class="input-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" placeholder="Your name here">
+                </div>
+                <div class="input-group">
+                    <label for="userAge">Age:</label>
+                    <input type="number" id="userAge" placeholder="How old are you?">
+                </div>
+                <button onclick="checkUserInfo()">Check Info</button>
+                <div id="userResult" class="result-box"></div>
+            </div>
+        </section>
+
+        <!-- Part 2: Functions -->
+        <section class="section" id="functions">
+            <h2>Part 2: Functions Practice</h2>
+            
+            <div class="content-box">
+                <h3>Simple Calculator</h3>
+                <p>Made my own calculator functions - pretty proud of this!</p>
+                <div class="calculator">
+                    <div class="input-group">
+                        <label for="num1">First number:</label>
+                        <input type="number" id="num1" placeholder="Enter number">
+                    </div>
+                    <div class="input-group">
+                        <label for="num2">Second number:</label>
+                        <input type="number" id="num2" placeholder="Enter number">
+                    </div>
+                    <div class="button-group">
+                        <button onclick="doMath('add')">Add</button>
+                        <button onclick="doMath('subtract')">Subtract</button>
+                        <button onclick="doMath('multiply')">Multiply</button>
+                        <button onclick="doMath('divide')">Divide</button>
+                    </div>
+                    <div id="calcResult" class="result-box"></div>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h3>Text Fun</h3>
+                <p>This function changes text in different ways:</p>
+                <div class="input-group">
+                    <label for="textInput">Type something:</label>
+                    <input type="text" id="textInput" placeholder="Enter text here">
+                </div>
+                <div class="button-group">
+                    <button onclick="changeText('upper')">MAKE BIG</button>
+                    <button onclick="changeText('lower')">make small</button>
+                    <button onclick="changeText('title')">Title Case</button>
+                    <button onclick="changeText('backwards')">sdrawkcaB</button>
+                </div>
+                <div id="textResult" class="result-box"></div>
+            </div>
+        </section>
+
+        <!-- Part 3: Loops -->
+        <section class="section" id="loops">
+            <h2>Part 3: Loops Stuff</h2>
+            
+            <div class="content-box">
+                <h3>Number Patterns</h3>
+                <p>Pick a number and I'll make some patterns with loops:</p>
+                <div class="input-group">
+                    <label for="patternNum">Enter number (1-10):</label>
+                    <input type="number" id="patternNum" min="1" max="10" value="3">
+                </div>
+                <button onclick="makePattern()">Make Pattern</button>
+                <div id="patternResult" class="result-box"></div>
+            </div>
+
+            <div class="content-box">
+                <h3>My Coding Languages</h3>
+                <p>Here's what I'm learning (using arrays and loops):</p>
+                <button onclick="showMyLanguages()">Show My List</button>
+                <button onclick="addNewLanguage()">Add Language</button>
+                <div id="languagesResult" class="result-box"></div>
+            </div>
+        </section>
+
+        <!-- Part 4: DOM -->
+        <section class="section" id="dom">
+            <h2>Part 4: DOM Manipulation</h2>
+            
+            <div class="content-box">
+                <h3>Color Box Fun</h3>
+                <p>Click buttons to change the box color:</p>
+                <div class="color-box" id="colorBox">
+                    <p>I'm a boring gray box... make me colorful!</p>
+                </div>
+                <div class="button-group">
+                    <button onclick="switchColor('red')">Red</button>
+                    <button onclick="switchColor('blue')">Blue</button>
+                    <button onclick="switchColor('green')">Green</button>
+                    <button onclick="switchColor('purple')">Purple</button>
+                    <button onclick="switchColor('random')">Surprise Me!</button>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h3>My To-Do List</h3>
+                <p>Add items to the list (click items to remove them):</p>
+                <div class="input-group">
+                    <label for="listItem">Add something:</label>
+                    <input type="text" id="listItem" placeholder="What do you need to do?">
+                    <button onclick="addItem()">Add</button>
+                </div>
+                <button onclick="clearAllItems()">Clear Everything</button>
+                <ul id="myList" class="todo-list"></ul>
+            </div>
+
+            <div class="content-box">
+                <h3>Show/Hide Magic</h3>
+                <p>Click to make content appear or disappear:</p>
+                <button onclick="toggleStuff()">Toggle Hidden Content</button>
+                <div id="hiddenStuff" class="hidden-content">
+                    <h4>You found me! 🎉</h4>
+                    <p>This is hidden content that appears and disappears using JavaScript!</p>
+                    <p>Pretty cool right? I'm getting the hang of this DOM manipulation thing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Console note -->
+        <section class="section">
+            <h2>Console Messages</h2>
+            <div class="console-note">
+                <p><strong>Don't forget to check the console (press F12)!</strong></p>
+                <p>I put lots of console.log messages to show what's happening in my code.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
