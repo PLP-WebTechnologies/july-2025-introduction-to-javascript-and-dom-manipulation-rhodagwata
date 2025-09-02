@@ -1,0 +1,278 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    background: #4a90e2;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Section boxes */
+.section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 8px;
+}
+
+.content-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4a90e2;
+}
+
+.content-box h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.content-box p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.content-box:last-child {
+    margin-bottom: 0;
+}
+
+/* Form elements */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+button:hover {
+    background: #357abd;
+}
+
+.button-group {
+    margin: 15px 0;
+}
+
+/* Results */
+.result-box {
+    background: white;
+    border: 2px solid #27ae60;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 15px;
+    display: none;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.result-box.error {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.result-box.show {
+    display: block;
+}
+
+/* Calculator specific */
+.calculator {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Color changing box */
+.color-box {
+    background: #ecf0f1;
+    border: 3px dashed #bdc3c7;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Todo list */
+.todo-list {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 15px;
+    max-height: 180px;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.todo-list li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.todo-list li:hover {
+    background: #e9ecef;
+}
+
+.todo-list li:last-child {
+    border-bottom: none;
+}
+
+.todo-list:empty::before {
+    content: "Your list is empty... add something!";
+    color: #999;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hidden content */
+.hidden-content {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+}
+
+.hidden-content.hidden {
+    display: none;
+}
+
+.hidden-content h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.hidden-content p {
+    margin-bottom: 8px;
+}
+
+/* Console note */
+.console-note {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+.console-note strong {
+    color: #f39c12;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 20px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+    
+    .content-box {
+        padding: 15px;
+    }
+    
+    .input-group input {
+        max-width: 100%;
+    }
+    
+    button {
+        margin: 2px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
